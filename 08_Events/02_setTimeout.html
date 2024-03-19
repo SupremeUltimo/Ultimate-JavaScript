@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let mainHeading = function () {
+        let h1 =  document.querySelector("h1");
+        h1.innerHTML = "World best leader (Ultimo)"
+        console.log("World best leader (Ultimo)");
+    }
+    let stoptime =  setTimeout(mainHeading,2000);
+
+    let button = document.querySelector('#stop');
+    button.addEventListener('click',()=>{
+        clearTimeout(stoptime);
+    });
+
+</script>
+</html>

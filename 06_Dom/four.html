@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code </title>
+</head>
+<body  style="background-color: #212121; color: #fff;" >
+    <ul class="language">
+        <li>JavaScript</li>
+
+    </ul>
+    <script>
+        function addlanguage(langName) {
+            const li = document.createElement("li");
+            li.innerHTML = `${langName}`
+            document.querySelector(".language").appendChild(li);
+        }
+        addlanguage("Ruby");
+        addlanguage("Multer");
+        function addOptiLanguage(langName) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector(".language").appendChild(li);
+        }
+        addOptiLanguage("Rust");
+        addOptiLanguage("bun");
+
+        // Edit
+       const secondlang = document.querySelector("li:nth-child(2)")
+    //    secondlang.innerHTML = "Mojo";
+        const newli = document.createElement('li');
+        newli.textContent = "php"
+        secondlang.replaceWith(newli);
+
+        // edit
+        const firstli = document.querySelector("li:first-child");
+        firstli.outerHTML = "<li>Hell</li>";
+
+
+        // remove
+        const lastli = document.querySelector("li:last-child");
+        lastli.remove();
+
+    </script>
+</body>
+</html>
